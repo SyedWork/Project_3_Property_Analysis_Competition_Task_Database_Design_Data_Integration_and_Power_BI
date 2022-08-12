@@ -1,0 +1,289 @@
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[Dim_School]    Script Date: 5/07/2018 2:00:10 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Dim_School](
+	[SchoolCode] [float] NULL,
+	[DimSchoolAltKey] [float] NULL,
+	[SchoolCode1] [float] NULL,
+	[SchoolName] [nvarchar](255) NULL,
+	[ICSEA_Value] [float] NULL,
+	[AgeID] [float] NULL,
+	[Street] [nvarchar](255) NULL,
+	[indigenous_pct] [nvarchar](255) NULL,
+	[ibot_pct] [nvarchar](255) NULL,
+	[date_1st_teacher] [nvarchar](255) NULL,
+	[level_of_schooling] [nvarchar](255) NULL,
+	[selective_school] [nvarchar](255) NULL,
+	[opportunity_class] [nvarchar](255) NULL,
+	[school_specialty_type] [nvarchar](255) NULL,
+	[school_subtype] [nvarchar](255) NULL,
+	[support_classes] [nvarchar](255) NULL,
+	[preschool_ind] [nvarchar](255) NULL,
+	[distance_education] [nvarchar](255) NULL,
+	[intensive_english_centre] [nvarchar](255) NULL,
+	[school_gender] [nvarchar](255) NULL,
+	[phone] [nvarchar](255) NULL,
+	[school_email] [nvarchar](255) NULL,
+	[fax] [nvarchar](255) NULL,
+	[LateOpeningSchool] [nvarchar](255) NULL,
+	[lga] [nvarchar](255) NULL,
+	[Electorate] [nvarchar](255) NULL,
+	[FedElectorate] [nvarchar](255) NULL,
+	[OperationalDirectorate] [nvarchar](255) NULL,
+	[PrincipalNetwork] [nvarchar](255) NULL,
+	[FacsDistrict] [nvarchar](255) NULL,
+	[LocalHealthDistrict] [nvarchar](255) NULL,
+	[AecgRegion] [nvarchar](255) NULL,
+	[ASGSRemoteness] [nvarchar](255) NULL,
+	[Latitude] [float] NULL,
+	[Longitude] [float] NULL,
+	[DateExtracted] [datetime] NULL
+) ON [PRIMARY]
+GO
+
+
+
+
+
+
+2).
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[DimAddressLocation]    Script Date: 5/07/2018 2:17:41 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[DimAddressLocation](
+	[DimAddressLocationAltKey] [float] NULL,
+	[LocationID] [float] NULL,
+	[Suburb] [nvarchar](255) NULL,
+	[Postal Code] [nvarchar](255) NULL,
+	[CityName] [nvarchar](255) NULL,
+	[Country] [nvarchar](255) NULL,
+	[StateCode] [nvarchar](255) NULL,
+	[State] [nvarchar](255) NULL
+) ON [PRIMARY]
+GO
+
+
+
+
+
+3).
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[DimDate]    Script Date: 5/07/2018 2:23:00 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[DimDate](
+	[DateKey] [nvarchar](255) NULL,
+	[FullDate] [datetime] NULL,
+	[DateName] [nvarchar](255) NULL,
+	[DayOfWeek] [float] NULL,
+	[DayNameOfWeek] [nvarchar](255) NULL,
+	[DayOfMonth] [float] NULL,
+	[DayOfYear] [float] NULL,
+	[WeekdayWeekend] [nvarchar](255) NULL,
+	[WeekOfYear] [float] NULL,
+	[MonthName] [nvarchar](255) NULL,
+	[MonthOfYear] [float] NULL,
+	[IsLastDayOfMonth] [nvarchar](255) NULL,
+	[CalendarQuarter] [float] NULL,
+	[CalendarYear] [float] NULL,
+	[CalendarYearMonth] [nvarchar](255) NULL,
+	[CalendarYearQtr] [nvarchar](255) NULL,
+	[FiscalMonthOfYear] [float] NULL,
+	[FiscalQuarter] [float] NULL,
+	[FiscalYear] [float] NULL,
+	[FiscalYearMonth] [nvarchar](255) NULL,
+	[FiscalYearQtr] [nvarchar](255) NULL
+) ON [PRIMARY]
+GO
+
+
+
+
+4).
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[DimEntryType]    Script Date: 5/07/2018 2:23:32 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[DimEntryType](
+	[DimEntranceType] [float] NULL,
+	[Entrance_Type] [nvarchar](255) NULL
+) ON [PRIMARY]
+GO
+
+
+
+
+5).
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[DimStreet]    Script Date: 5/07/2018 2:24:06 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[DimStreet](
+	[DimStreetAltKey] [float] NULL,
+	[StreetID] [float] NULL,
+	[Street_Name] [nvarchar](255) NULL
+) ON [PRIMARY]
+GO
+
+
+
+
+6).
+
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[DimStreetType]    Script Date: 5/07/2018 2:24:54 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[DimStreetType](
+	[DimStreetTypeAltKey] [float] NULL,
+	[Street_Type] [nvarchar](255) NULL
+) ON [PRIMARY]
+GO
+
+
+
+
+7).
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[DimTrainStation]    Script Date: 5/07/2018 2:25:22 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[DimTrainStation](
+	[DimTrainStationAltKey] [float] NULL,
+	[TrainStationID] [float] NULL,
+	[TrainStation] [nvarchar](255) NULL
+) ON [PRIMARY]
+GO
+
+
+
+
+
+8).
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[FACT_Property]    Script Date: 5/07/2018 2:28:32 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[FACT_Property](
+	[LocationAltKey] [float] NULL,
+	[UpdateDateKey] [float] NULL,
+	[Property_Median_Value] [money] NULL
+) ON [PRIMARY]
+GO
+
+
+
+
+9).
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[FACT_School]    Script Date: 5/07/2018 2:30:00 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[FACT_School](
+	[FactSchoolAltKey] [float] NULL,
+	[DimSchoolAltKey] [float] NULL,
+	[DimAddressLocationAltKey] [float] NULL,
+	[student_number] [float] NULL
+) ON [PRIMARY]
+GO
+
+
+10).
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[FactTrainStation]    Script Date: 5/07/2018 2:32:12 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[FactTrainStation](
+	[FactTrainStationAltKey] [float] NULL,
+	[DimTrainStationAltKey] [float] NULL,
+	[DimStreeAltKey] [float] NULL,
+	[DimStreetTypeAltKEy] [float] NULL,
+	[DimEntranceTypeAltKey] [float] NULL,
+	[LAT] [float] NULL,
+	[LONG] [float] NULL,
+	[Exit_Number] [nvarchar](255) NULL
+) ON [PRIMARY]
+GO
+
+
+USE [Competition task]
+GO
+
+/****** Object:  Table [dbo].[FACT_School]    Script Date: 5/07/2018 2:30:00 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[FACT_School](
+	[FactSchoolAltKey] [float] NULL,
+	[DimSchoolAltKey] [float] NULL,
+	[DimAddressLocationAltKey] [float] NULL,
+	[student_number] [float] NULL
+) ON [PRIMARY]
+GO
+
+
